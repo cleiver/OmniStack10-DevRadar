@@ -5,12 +5,17 @@ import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 import { MaterialIcons } from '@expo/vector-icons'
 
 import api from '../services/api'
+import { connect, disconnect, subscribeToNewDevs } from '../services/socket'
 
 // navigation é enviado automaticamente pra toda pagina
 function Main({ navigation }) {
   const [currentRegion, setCurrentRegion] = useState(null)
   const [devs, setDevs] = useState([])
   const [techs, setTechs] = useState('')
+
+  useEffect(() => {
+    subscribeToNewDevs(dev => setDevs([...devs, dev]))
+  }, [devs])
 
   useEffect(() => {
     async function loadInitialPosition() {
@@ -35,6 +40,17 @@ function Main({ navigation }) {
     loadInitialPosition()
   })
 
+  function setupWebsocket() {
+    disconnect()
+
+    const { latitude, longitude } = currentRegion
+    connect(
+      latitude,
+      longitude,
+      techs
+    )
+  }
+
   async function loadDevs() {
     const { latitude, longitude } = currentRegion
 
@@ -47,6 +63,7 @@ function Main({ navigation }) {
     })
 
     setDevs(apiResponse.data.devs)
+    setupWebsocket()
   }
 
   function handleRegionChange(region) {
