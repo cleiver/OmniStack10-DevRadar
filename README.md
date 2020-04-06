@@ -14,13 +14,13 @@
   <img alt="License" src="https://img.shields.io/github/license/cleiver/OmniStack10-DevRadar">
 </p>
 
-## Projeto
+## Project
 
-O DevRadar é um projeto que visa conectar desenvolvedores próximos a você que trabalham com as mesmas tecnologias.
+DevRadar is a project that aims to connect developers near you that work with the same technologies.
 
-## Tecnologias
+## Technologies
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+This project was developed using:
 
 - [Node.js](https://nodejs.org/en/)
 - [MongoDB](https://www.mongodb.com)
@@ -28,13 +28,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
-## Ambiente de Desenvolvimento
+## Screenshots
 
-Por praticidade, mantenho instalado os binários das linguagens que desenvolvo na minha prória máquina. Mas os serviços que venho a utilizar utilizo imagens Docker para não poluir meu notebook com diversas versões e sistemas diferentes.
+## Development Environment
 
-### Banco de dados
+To make things easier and cleaner, I keep my program languages installed locally but the services I need I use with Docker.
 
-Para esse projeto utilizei a imagem oficial do Mongo disponível no [Docker Hub](https://hub.docker.com/_/mongo).
+### Database
+
+For this project I used the official Mongo release available at [Docker Hub](https://hub.docker.com/_/mongo).
 
 ```
 docker run --name mongosrv -v /var/dev/mongo:/data/db -p 27017:27017 -d mongo
@@ -42,13 +44,13 @@ docker run --name mongosrv -v /var/dev/mongo:/data/db -p 27017:27017 -d mongo
 
 ### Back-end
 
-O back-end da aplicação está disponivel na pasta **backend**. Para iniciar o sistema basta executar os seguintes comandos dentro da pasta:
+The back-end application is avaialable at, well, the backend folder.
 
 ```
 node src/index.js
 ```
 
-ou
+or
 
 ```
 yarn run dev
