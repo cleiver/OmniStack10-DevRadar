@@ -14,11 +14,11 @@
   <img alt="License" src="https://img.shields.io/github/license/cleiver/OmniStack10-DevRadar">
 </p>
 
-## Project
+## 💼 Project
 
 DevRadar is a project that aims to connect developers near you that work with the same technologies.
 
-## Technologies
+## 🤓 Technologies
 
 This project was developed using:
 
@@ -28,9 +28,17 @@ This project was developed using:
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
-## Screenshots
+## 📷 Screenshots
 
-## Development Environment
+<img alt="DevRadar Web" title="DevRadar Web" src="./web.png" width="600px" />
+<img alt="DevRadar Mobile" title="DevRadar Mobile" src="./mobile_1.png" width="400px" />
+<img alt="DevRadar Mobile" title="DevRadar Mobile" src="./mobile_2.png" width="400px" />
+
+## 📋 Probable Roadmap
+- host somewhere
+- pre-load from github?
+
+## 💻 Development Environment
 
 To make things easier and cleaner, I keep my program languages installed locally but the services I need I use with Docker.
 
@@ -44,14 +52,25 @@ docker run --name mongosrv -v /var/dev/mongo:/data/db -p 27017:27017 -d mongo
 
 ### Back-end
 
-The back-end application is avaialable at, well, the backend folder.
+You need to run the backend application to use the web and mobile interface.
 
 ```
-node src/index.js
+$ cd backend
+$ yarn
+$ yarn dev
 ```
 
-or
-
+### Web
 ```
-yarn run dev
+$ cd web
+$ yarn
+$ yarn start
+```
+
+### Mobile
+The mobile app was developed using expo, so it should be easy to run the app in your smartphone
+```
+$ cd mobile
+$ yarn
+$ yarn start
 ```

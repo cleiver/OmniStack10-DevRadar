@@ -24,7 +24,8 @@
     "react-native-webview": "8.1.1",
     "react-navigation": "^4.3.7",
     "react-navigation-stack": "^2.3.11",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^2.3.0",
+    "logkitty": "^0.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
