@@ -18,6 +18,9 @@
 
 DevRadar is a project that aims to connect developers near you that work with the same technologies.
 
+## 🤔 Semana OmniStack?
+OmniStack week is an online event by [Rocketseat](https://rocketseat.com.br) where we develop an whole application from scratch in a week.
+
 ## 🤓 Technologies
 
 This project was developed using:
